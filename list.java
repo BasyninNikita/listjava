@@ -20,16 +20,20 @@ public class  list <T> {
     }
     T get(int index){
         T a=null;
+        node b=head;
         for(int i=0;i<index;++i){
-            a=head.next.value;
+            a=b.value;
+            b=b.next;
         }
 
         return a;
     }
 
     public static void main(String[] args) {
-
+        list<String> a= new list();
+        a.add("str");
+        a.add("str2");
+        System.out.println( a.get(2));
     }
-
-
+    
 }
