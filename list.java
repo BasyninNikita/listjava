@@ -1,7 +1,8 @@
-public class  list <T> {
-    public class node{
-        T value;
-        node next;
+
+public class  Mylist <T> {
+    private class node{
+        private T value;
+        private node next;
     }
     private node head;
     private node tail;
@@ -21,7 +22,7 @@ public class  list <T> {
     T get(int index){
         T a=null;
         node b=head;
-        for(int i=0;i<index;++i){
+        for(int i=-1;i<index;++i){
             a=b.value;
             b=b.next;
         }
@@ -30,10 +31,10 @@ public class  list <T> {
     }
 
     public static void main(String[] args) {
-        list<String> a= new list();
+        Mylist<String> a= new Mylist<>();
         a.add("str");
         a.add("str2");
-        System.out.println( a.get(2));
+        System.out.println( a.get(0));
     }
-    
+
 }
